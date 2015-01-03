@@ -1,34 +1,13 @@
-var app = angular
-          .module("TRT", ["ui.bootstrap"])
-          .config(["$routeProvider", function($routeProvider){
-            $routeProvider
-              .when("/", { templateUrl: 'template.html', controller: 'DemoCtl' });
-          }]);
-          
-app.controller("DemoCtl", ["$scope", "$dialog", function($scope, $dialog){
-  $scope.launch = function() {
-    var d = $dialog.dialog({
-      backdrop: true,
-      keyboard: true,
-      windowClass : "datagridModal",
-      backdropClick: true,
-      templateUrl: "dialog.html",
-      controller: "DialogCtl"
-    });
-    
-    d.open().then(function(result) { console.log("d.open().then"); });
-  };
-}]);
-
-app.controller("DialogCtl", ["$scope", "dialog", function($scope, dialog){
-  $scope.data = [
-      { id: 1, name: 'test', color: 'red' },
-      { id: 2, name: 'foo', color: 'regreen' },
-      { id: 3, name: 'bar', color: 'blue' }
-    ];
-    
-    $scope.close = function(result) {
-      console.log("DialogCtrl.close");
-      dialog.close(true);
+// app.js
+var app = angular.module('myApp', ['ngGrid']);
+app.controller('MyCtrl', function($scope) {
+    $scope.myData = [{name: "Moroni", age: 50},
+                     {name: "Tiancum", age: 43},
+                     {name: "Jacob", age: 27},
+                     {name: "Nephi", age: 29},
+                     {name: "Enos", age: 34}];
+    $scope.gridOptions = { 
+      data: 'myData', 
+      enableCellSelection: true
     };
-}]);
+});

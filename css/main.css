@@ -32,17 +32,26 @@ body:after {
 
 .mainView {
 width: 1000px;
-height: 300px;
-margin-left: 300px;
+height: 600px;
+margin-left: 200px;
 margin-top:150px;
 
+}
+
+.borderIndent {
+width: 995px;
+height: 552px;
+margin: 2px;
+border-width: 1px;
+border-style: solid;
+border-color:#BEC8CE;
 }
 
 .container {
 width:100%;
 }
 .panelContainer {
-margin:20px;
+margin:10px;
 }
 
 .panel-primary>.panel-heading {
@@ -92,14 +101,6 @@ width:100%;
 height:100%
 }
 
-.borderIndent {
-width: 995px;
-height: 252px;
-margin: 2px;
-border-width: 1px;
-border-style: solid;
-border-color:#BEC8CE;
-}
 
 .navbar-default .navbar-nav>li>a {
 color: #777;
@@ -108,6 +109,9 @@ border-width: 1px;
 border-color: #cacad2;
 }
 
+.navbar{
+ margin:10px;
+}
 
 .searchBox input[type="text"] {
     position: relative;

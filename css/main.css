@@ -2,9 +2,71 @@ body {
     background-image:  url(../img/glow.png), url(../img/backgroundCoverTrans.png),  url(../img/backgroundThread.png) ;
     background-repeat: repeat-y,  repeat-y, repeat;
     background-color:black;
+    position: relative;
+
+}
+html, body {
+  min-height: 100%;
+}
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}
+/*  
+body:after {
+  content: "";
+  display: block;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.3);
+} */
+
+.mainView {
+width: 1000px;
+height: 300px;
+margin-left: 300px;
+margin-top:150px;
 
 }
 
+.container {
+width:100%;
+}
+.panelContainer {
+margin:20px;
+}
+
+.panel-primary>.panel-heading {
+color: #000;
+background-color: #e1ecf4!important;
+border-color: #e1ecf4;
+background-image:none;
+border-bottom-width: 1px;
+border-bottom-color:#BEC8CE;
+border-bottom-style: solid;
+}
+
+
+.panel-heading{
+background-color:#e1ecf4;
+font-family: arial;
+margin: 0;
+border-width: 1px;
+border-style: solid;
+border-bottom:#BEC8CE;
+}
+.panel-body{
+padding:0; 
+}
 
 .modal {
 width:800px;
@@ -31,14 +93,21 @@ height:100%
 }
 
 .borderIndent {
-width: 795px;
-height: 500px;
+width: 995px;
+height: 252px;
 margin: 2px;
 border-width: 1px;
 border-style: solid;
 border-color:#BEC8CE;
-
 }
+
+.navbar-default .navbar-nav>li>a {
+color: #777;
+border-left: solid;
+border-width: 1px;
+border-color: #cacad2;
+}
+
 
 .searchBox input[type="text"] {
     position: relative;
@@ -73,6 +142,8 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 .navcontainr a:hover, .navcontainr a:active {
     background-color: #7A991A;
 }
+
+
 
 
 

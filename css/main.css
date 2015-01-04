@@ -18,6 +18,9 @@ html, body {
   background-color: rgba(0,0,0,0.5);
 }
 
+.selected {
+color:#dd8e10;
+}
 .green {
     color: green;
 }

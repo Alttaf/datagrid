@@ -2293,23 +2293,19 @@ ngRow.prototype.alternatingRowClass = function () {
 	return classes;
 };
 ngRow.prototype.getProperty = function (path) {
-    console.log("path");
-    console.log(path);
-    var x  = this.utils.evalProperty(this.entity, path);
-    var y = parseFloat(x);
-    console.log(typeof y);
-    console.log(y);
 	return this.utils.evalProperty(this.entity, path);
 };
 ngRow.prototype.getPropertyNumber = function (path) {
-    console.log("path");
-    console.log(path);
     var x  = this.utils.evalProperty(this.entity, path);
     var y = parseFloat(x);
-    console.log(typeof y);
-    console.log(y);
 	return y;
 };
+
+ngRow.prototype.getRowIndex = function (){
+return this.rowIndex;
+}
+
+
 ngRow.prototype.copy = function () {
 	this.clone = new ngRow(this.entity, this.config, this.selectionProvider, this.rowIndex, this.utils);
 	this.clone.isClone = true;

@@ -1,3 +1,35 @@
 id = o8ol38h
 
 https://spreadsheets.google.com/feeds/list/18kEw2WXq6uhT9C0OE7uvocDVRahm245eAEpl3AVdl_4/o8ol38h/public/values?alt=json
+
+
+
+spreadsheet
+https://docs.google.com/spreadsheets/d/1yWwNcZ6E2MSXj738NL4k_I8s3dFa4JURXhZaaMvLu2c/pubhtml
+
+
+
+ssheet
+https://spreadsheets.google.com/feeds/list/1yWwNcZ6E2MSXj738NL4k_I8s3dFa4JURXhZaaMvLu2c/ovoleoe/public/values?alt=json
+
+key:
+ovoleoe
+
+data grid
+https://docs.google.com/spreadsheets/d/1medbuSpYIHI_mv7fOLddlbAGdakeu0W66zRpJLeT8DY/pubhtml?gid=1669732298&single=true
+key:
+orm45cg
+https://spreadsheets.google.com/feeds/list/1medbuSpYIHI_mv7fOLddlbAGdakeu0W66zRpJLeT8DY/orm45cg/public/values?alt=json
+
+
+get key url
+https://spreadsheets.google.com/feeds/worksheets/1_1FT-JLU7drFXkhEJq4w2kS0J7Ot-BsRZAiu9X6cRMc/private/full
+
+csv
+https://docs.google.com/spreadsheets/d/1_1FT-JLU7drFXkhEJq4w2kS0J7Ot-BsRZAiu9X6cRMc/pubhtml
+
+url:
+https://spreadsheets.google.com/feeds/list/1_1FT-JLU7drFXkhEJq4w2kS0J7Ot-BsRZAiu9X6cRMc/oria9v1/public/values?alt=json
+
+key:
+oria9v1

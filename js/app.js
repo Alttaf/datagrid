@@ -1,38 +1,10 @@
 // app.js
 var app = angular.module('myApp', ['ngGrid']);
-app.controller('MyCtrl', function($scope, $http) {
-    $scope.x= console.log;
-    // serpatate into service
-    var feedReader = function (data, titlesArray){
-        var feedArray = [];
-        var feedArray1 = [];
-        var DataLength = data.feed.entry.length;
-        
-        for(var i=0; i< DataLength; i++){
-        //init
-             var row = [];
-             var row1 = {};
-            for(var j=0; j< titlesArray.length; j++){
-                var title = data.feed.entry[i][titlesArray[j]]['$t'];
-                //console.log(title);
-                var y = titlesArray[j]
-                y = y.split("$").pop();
-                var x ={};
-                x[y] = title;
-                row.push(x);
-                row1[y] = title;
-               // console.log(x);
-                
-            }
-            feedArray.push(row);
-            feedArray1.push(row1);
-            // push
-        }
-        //console.log(feedArray);
-        //console.log(feedArray1);
-        $scope.feedArray = feedArray1;
-        $scope.myData = feedArray1;
-    }
+app.controller('MyCtrl', function($scope, $http, pollingService, feedReaderService) {
+    
+    
+    pollingService.startPolling("google", 'https://spreadsheets.google.com/feeds/list/1l6OULdMB6wv03z19VyW3S8-OgejwId6Rjl1cZY_eMO8/on8iqg2/public/values?alt=json', 10000, function(data){console.log(data)});
+      
     $scope.moused = function(row, tArray, title){
             console.log("tArray = ");
         console.log(tArray);
@@ -61,8 +33,9 @@ app.controller('MyCtrl', function($scope, $http) {
 
    $http.get('https://spreadsheets.google.com/feeds/list/1l6OULdMB6wv03z19VyW3S8-OgejwId6Rjl1cZY_eMO8/on8iqg2/public/values?alt=json')
   .success(function (data, status) {
-    feedReader(data, $scope.tArray);
-   // $scope.myData = $scope.feedArray1;
+    console.log("feed Reader");
+    console.log(feedReaderService.read(data, $scope.tArray));
+    $scope.myData = feedReaderService.read(data, $scope.tArray);
   })
   .error(function (data, status) {
     console.log("status"+status);

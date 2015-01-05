@@ -8,6 +8,8 @@ body {
 html, body {
   min-height: 100%;
 }
+
+
 .overlay {
   position: relative;
   top: 0;
@@ -18,6 +20,12 @@ html, body {
   background-color: rgba(0,0,0,0.5);
 }
 
+
+.navigationContainr {
+padding-left:55px;
+padding-top:20px;
+
+}
 .selected {
 color:#dd8e10;
 }
@@ -39,9 +47,12 @@ color:#dd8e10;
     font-family: arial;
     margin: 10px;
 }
+
+
+/*The main view and border indent panels are realted probably use a sass calculation to managae here*/
 .mainView {
 width: 1000px;
-height: 600px;
+height: 500px;
 margin-left: 200px;
 margin-top:150px;
 
@@ -49,7 +60,7 @@ margin-top:150px;
 
 .borderIndent {
 width: 995px;
-height: 552px;
+height: 452px;
 margin: 2px;
 border-width: 1px;
 border-style: solid;
@@ -95,21 +106,18 @@ left: 35%;
 padding-left: 10px;
 }
 
-pre{
-border-top-left-radius:4px;
-border-top-right-radius:4px;
-border-bottom-right-radius:0px;
-border-bottom-left-radius:0px;
-background-color:#e1ecf4;
-font-family: arial;
-margin: 0;
-}
 
 .mainPanel {
 width:100%; 
 height:100%
 }
 
+#navInitial li:last-child { 
+color: #777;
+border-right: solid;
+border-width: 1px;
+border-color: #cacad2;
+}
 
 .navbar-default .navbar-nav>li>a {
 color: #777;
@@ -125,55 +133,14 @@ border-color: #cacad2;
 .searchBox input[type="text"] {
     position: relative;
     background-color:#fafafa;
+    
+}
+
+.searchBox {
+    padding-top:10px;
+    
 }
 
 input { font-family: 'FontAwesome'; } /* This is for the placeholder */
-
-.navcontainr ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.navcontainr li {
-    float: left;
-}
-
-.navcontainr a:link, .navcontainr a:visited {
-    display: block;
-    width: 120px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #98bf21;
-    text-align: center;
-    padding: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.navcontainr a:hover, .navcontainr a:active {
-    background-color: #7A991A;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
